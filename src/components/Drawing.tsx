@@ -27,8 +27,8 @@ export default function BasicCard(drawingProps: DrawingProps) {
   };
 
   return (
-    <Card sx={{ boxShadow: 'none', border: 'none', maxWidth: '30%' , display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-      <CardContent style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+    <Card sx={{ boxShadow: 'none', border: 'none' , display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+      <CardContent style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '30%'}}>
         <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 18, fontWeight: 'bold' }}>
           {drawingProps.title}
         </Typography>
