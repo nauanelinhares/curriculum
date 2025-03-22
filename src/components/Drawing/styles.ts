@@ -2,7 +2,6 @@ import { styled } from '@mui/material/styles';
 
 export const StyledImage = styled('img')({
   width: '100%',
-  height: 'auto',
   borderRadius: '10px',
   border: 'none',
   boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.5)',
@@ -11,3 +10,17 @@ export const StyledImage = styled('img')({
     transform: 'scale(1.05)',
   },
 });
+
+export const modalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  maxWidth: '90vw',
+  maxHeight: '90vh',
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  border: 'none',
+  overflow: 'auto',
+  p: 2,
+};
