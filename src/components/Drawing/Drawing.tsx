@@ -17,7 +17,7 @@ export default function BasicCard(drawingProps: DrawingProps) {
   return (
     <Card sx={{ boxShadow: 'none', border: 'none' , display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
       <CardContent style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 18, fontWeight: 'bold' }}>
+        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 25, fontWeight: 'bold' }}>
           {drawingProps.title}
         </Typography>
         
