@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nauanelinhares.github.io/drawing-project",
+  "homepage": "https://nauanelinhares.github.io/curriculum",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
