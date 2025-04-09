@@ -1,4 +1,3 @@
-import { Stepper, Step, StepLabel } from "@mui/material";
 import { ExperienceProps } from "./types";
 
 const getMostRecentExperience = (experiences: ExperienceProps[]) => {
@@ -22,16 +21,18 @@ const ExperienceBulletPoints = ({ points }: { points: string[] }) => (
     {points.map((point, index) => (
       <div key={index} className="flex flex-row gap-4 items-center">
         <div className="flex-shrink-0 mt-1.5 w-2 h-2 bg-gray-500 rounded-full"></div>
-        <div className="text-gray-500 text-justify">{point}</div>
+        <div className="text-[0.85rem] text-gray-500 text-justify">{point}</div>
       </div>
     ))}
   </div>
 );
 
 const ExperienceRole = ({ experience }: { experience: ExperienceProps }) => (
-  <div className="flex flex-col pl-4">
-    <span className="text-gray-800 text-xl">{experience.title}</span>
-    <span className="text-gray-500 text-[1.15rem]">
+  <div className="flex flex-col">
+    <span className="text-gray-800 text-[1.15rem] flex justify-start">
+      {experience.title}
+    </span>
+    <span className="text-gray-500  flex justify-start">
       {formatDate(experience.startDate)} - {formatDate(experience.endDate)}
     </span>
     {experience.bulletPoints && (
@@ -100,41 +101,24 @@ export default function Experiences({
 
   return (
     <>
-      <div className="text-gray-500 text-4xl pb-4">{title}</div>
-      <div className="relative">
-        <Stepper
-          orientation="vertical"
-          activeStep={-1}
-          connector={
-            <div className="absolute left-[10px] top-0 bottom-0 w-[2px] bg-gray-500"></div>
-          }
-        >
-          {sortedCompanies.map((company) => (
-            <Step key={company} expanded={true} className="flex flex-col">
-              <StepLabel
-                icon={
-                  <div className="flex items-center w-3 h-3 mt-2 ml-1  bg-gray-500 rounded-full z-10"></div>
-                }
-                className="!items-start !p-0"
-              >
-                <div className="flex flex-col gap-2">
-                  <span className="text-gray-500 text-2xl font-semibold">
-                    {company}
-                  </span>
-                  <div className="flex flex-col gap-4">
-                    {groupExperiencesByRole(groupedExperiences[company]).map(
-                      (experience, index) => (
-                        <div key={index} className="flex flex-col">
-                          <ExperienceRole experience={experience} />
-                        </div>
-                      )
-                    )}
+      <div className="text-gray-500 text-2xl pb-4">{title}</div>
+      <div className="flex flex-col gap-8">
+        {sortedCompanies.map((company) => (
+          <div key={company} className="flex flex-col gap-2">
+            <span className="text-gray-500 text-[1.25rem] font-semibold flex justify-start">
+              {company}
+            </span>
+            <div className="flex flex-col gap-4 pl-4 border-gray-300 ">
+              {groupExperiencesByRole(groupedExperiences[company]).map(
+                (experience, index) => (
+                  <div key={index} className="flex flex-col relative">
+                    <ExperienceRole experience={experience} />
                   </div>
-                </div>
-              </StepLabel>
-            </Step>
-          ))}
-        </Stepper>
+                )
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

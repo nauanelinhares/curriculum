@@ -1,3 +1,5 @@
+import { SocialMediaProps } from "../../types/social-media";
+
 export interface Education {
   school: string;
   degree: string;
@@ -23,4 +25,5 @@ export interface SideMenuProps {
   education: Education[];
   skillCategories: SkillCategory[];
   languages: Language[];
+  socialMedia: SocialMediaProps[];
 }
