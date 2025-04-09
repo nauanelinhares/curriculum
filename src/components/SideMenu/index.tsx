@@ -7,7 +7,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
   languages,
 }) => {
   return (
-    <div className="w-1/4 min-h-screen bg-gray-100 p-6 border-r border-gray-200">
+    <div className="flex flex-col w-1/4 min-h-screen bg-gray-100 p-6 border-r border-gray-200 gap-20">
       <div className="mt-50">
         <h2 className="text-xl font-bold mb-4 text-gray-700">Education</h2>
         {education.map((edu, index) => (

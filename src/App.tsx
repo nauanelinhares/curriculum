@@ -1,11 +1,9 @@
 import './App.css'
-import Drawing from './components/Drawing/Drawing'
-import residentEvil from './assets/residentEvil.jpg'
-import instagram from './assets/instagram.png'
-import linkedin from './assets/linkedin.png'
-import gmail from './assets/gmail.png'
-import { Grid2 } from '@mui/material'
-import Experiences from './components/Experiences'
+import instagram from "./assets/instagram.png";
+import linkedin from "./assets/linkedin.png";
+import github from "./assets/github.png";
+import gmail from "./assets/gmail.png";
+import Experiences from "./components/Experiences";
 import userIcon from "./assets/user-icon.png";
 import SideMenu from "./components/SideMenu";
 
@@ -16,7 +14,8 @@ import {
   user,
   socialMedia,
   experiences,
-} from "./Users/kubra-gonen";
+  extraActivities,
+} from "./Users/nauane-linhares";
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
 
       {/* Main content */}
       <div className="w-3/4 p-6">
-        <h1 className="bg-gradient-to-r from-gray-500 to-stone-950 bg-clip-text text-5xl font-extrabold text-transparent ...">
+        <h1 className="bg-gray-700 bg-clip-text text-5xl font-extrabold text-transparent ...">
           {user.name}
         </h1>
         <h2 className="text-gray-500 text-2xl">{user.role}</h2>
@@ -39,6 +38,8 @@ function App() {
                     ? linkedin
                     : socialMedia[i].icon === "iconInstagram"
                     ? instagram
+                    : socialMedia[i].icon === "iconGithub"
+                    ? github
                     : gmail
                 }
                 alt={socialMedia[i].label}
@@ -63,22 +64,11 @@ function App() {
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
-        <Experiences experiences={experiences} />
+        <Experiences experiences={experiences} title="Experiences" />
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
-        <div className="text-gray-500 text-4xl pb-4">Portfolio</div>
-        <Grid2 container spacing={2}>
-          <Grid2 size={4}>
-            <Drawing image={residentEvil} title="Lady Dimitrescu" />
-          </Grid2>
-          <Grid2 size={4}>
-            <Drawing image={residentEvil} title="Lady Dimitrescu" />
-          </Grid2>
-          <Grid2 size={4}>
-            <Drawing image={residentEvil} title="Lady Dimitrescu" />
-          </Grid2>
-        </Grid2>
+        <Experiences experiences={extraActivities} title="Extra Activities" />
       </div>
     </div>
   );
