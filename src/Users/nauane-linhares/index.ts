@@ -41,8 +41,8 @@ export const skillCategories: SkillCategory[] = [
 
 export const languages: Language[] = [
   { name: "Portuguese", level: "Native" },
-  { name: "English", level: "Fluent" },
-  { name: "Turkish", level: "Intermediate" },
+  { name: "English", level: "Intermediate" },
+  { name: "Turkish", level: "Beginner" },
 ];
 
 export const experiences: ExperienceProps[] = [
