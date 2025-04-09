@@ -25,6 +25,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Excel", level: 90 },
       { name: "Power BI", level: 85 },
       { name: "Golang", level: 90 },
+      { name: "Rust", level: 70 },
       { name: "Typescript", level: 85 },
       { name: "TensorFlow", level: 80 },
     ],
