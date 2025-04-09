@@ -9,18 +9,22 @@ import SideMenu from "./components/SideMenu";
 
 import {
   education,
-  skills,
   languages,
   user,
   socialMedia,
   experiences,
   extraActivities,
+  skillCategories,
 } from "./Users/nauane-linhares";
 
 function App() {
   return (
     <div className="flex">
-      <SideMenu education={education} skills={skills} languages={languages} />
+      <SideMenu
+        education={education}
+        skillCategories={skillCategories}
+        languages={languages}
+      />
 
       {/* Main content */}
       <div className="w-3/4 p-6">

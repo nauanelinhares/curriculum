@@ -3,46 +3,52 @@ import { SideMenuProps } from "./types";
 
 const SideMenu: React.FC<SideMenuProps> = ({
   education,
-  skills,
+  skillCategories,
   languages,
 }) => {
   return (
-    <div className="flex flex-col w-1/4 min-h-screen bg-gray-100 p-6 border-r border-gray-200 gap-20">
-      <div className="mt-50">
-        <h2 className="text-xl font-bold mb-4 text-gray-700">Education</h2>
+    <div className="flex flex-col w-1/4 min-h-screen bg-gray-100 p-6 border-r border-gray-200 gap-5">
+      <div className="mt-60">
+        <h2 className="text-xl font-bold mb-4 text-gray-700 text-justify">
+          Education
+        </h2>
         {education.map((edu, index) => (
           <div key={index} className="mb-4">
-            <h3 className="font-semibold text-red-500">{edu.school}</h3>
-            <p className="text-gray-600">{edu.degree}</p>
-            <p className="text-gray-500 text-sm">{edu.period}</p>
+            <h3 className="font-semibold text-gray-700 text-justify">
+              {edu.school}:
+            </h3>
+            <p className="text-gray-600 text-justify">
+              {edu.degree} - {edu.period}
+            </p>
           </div>
         ))}
       </div>
 
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-4 text-gray-700">Skills</h2>
-        {skills.map((skill, index) => (
-          <div key={index} className="mb-2">
-            <div className="flex justify-between mb-1">
-              <span className="text-gray-600">{skill.name}</span>
-              <span className="text-gray-500">{skill.level}%</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-gray-600 rounded-full h-2"
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
+      <div className="mb-2">
+        <h2 className="text-xl font-bold mb-4 text-gray-700 text-justify">
+          Skills
+        </h2>
+        {skillCategories.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-6">
+            <h3 className="font-semibold text-gray-700 mb-3 text-justify">
+              {category.name}:{" "}
+            </h3>
+            <p className="text-gray-600 text-justify">
+              {category.skills.map((skill) => skill.name).join(", ")}
+            </p>
           </div>
         ))}
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-4 text-gray-700">Languages</h2>
+        <h2 className="text-xl font-bold mb-4 text-gray-700 text-justify">
+          Languages
+        </h2>
         {languages.map((lang, index) => (
-          <div key={index} className="mb-2">
-            <span className="text-gray-600">{lang.name}</span>
-            <span className="text-gray-500 ml-2">- {lang.level}</span>
+          <div key={index} className="mb-2 text-justify">
+            <span className="text-gray-600 text-justify">
+              {lang.name} - {lang.level}
+            </span>
           </div>
         ))}
       </div>

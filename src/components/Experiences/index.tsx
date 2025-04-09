@@ -20,8 +20,8 @@ const formatDate = (date: Date | undefined | null) => {
 const ExperienceBulletPoints = ({ points }: { points: string[] }) => (
   <div className="mt-2">
     {points.map((point, index) => (
-      <div key={index} className="flex flex-row gap-2 items-center">
-        <div className="flex items-center w-2 h-2 bg-black rounded-full "></div>
+      <div key={index} className="flex flex-row gap-4 items-center">
+        <div className="flex-shrink-0 mt-1.5 w-2 h-2 bg-gray-500 rounded-full"></div>
         <div className="text-gray-500 text-justify">{point}</div>
       </div>
     ))}
@@ -110,10 +110,10 @@ export default function Experiences({
           }
         >
           {sortedCompanies.map((company) => (
-            <Step key={company} expanded={true} className="relative">
+            <Step key={company} expanded={true} className="flex flex-col">
               <StepLabel
                 icon={
-                  <div className="flex justify-center w-4 h-4  bg-black rounded-full z-10"></div>
+                  <div className="flex items-center w-3 h-3 mt-2 ml-1  bg-gray-500 rounded-full z-10"></div>
                 }
                 className="!items-start !p-0"
               >
