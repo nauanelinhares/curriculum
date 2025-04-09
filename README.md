@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# Currículo Online - [Seu Nome]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto de currículo online interativo construído com React, TypeScript e Vite.
 
-Currently, two official plugins are available:
+## Visão Geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém o código-fonte para meu currículo online pessoal. Ele apresenta minhas habilidades, experiência profissional e projetos de forma interativa e moderna.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar Localmente
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior recomendada)
+- npm ou yarn
+
+### Instalação
+
+1.  Clone o repositório:
+    ```bash
+    git clone <url-do-seu-repositorio>
+    cd <nome-do-diretorio-do-projeto>
+    ```
+2.  Instale as dependências:
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
+
+### Rodando o Servidor de Desenvolvimento
+
+```bash
+npm run dev
+# ou
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Abra [http://localhost:5173](http://localhost:5173) (ou a porta especificada no terminal) no seu navegador.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Build para Produção
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run build
+# ou
+yarn build
 ```
+
+Isso criará uma pasta `dist` com os arquivos otimizados para produção.
+
+## Deploy
+
+*(Opcional: Descreva como fazer o deploy do projeto, ex: Vercel, Netlify, GitHub Pages)*
+
+## Contato
+
+*(Opcional: Adicione links para suas redes sociais ou e-mail)*
