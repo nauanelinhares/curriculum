@@ -138,7 +138,7 @@ export const socialMedia: SocialMediaProps[] = [
   },
   {
     label: "Email",
-    url: "nauane.linhares@gmail.com",
+    url: "mailto:nauane.linhares@gmail.com",
     icon: "iconEmail",
   },
   {
