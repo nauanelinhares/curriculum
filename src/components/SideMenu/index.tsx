@@ -1,4 +1,3 @@
-import React from "react";
 import { SideMenuProps } from "./types";
 import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
