@@ -29,10 +29,8 @@ const ExperienceBulletPoints = ({ points }: { points: string[] }) => (
 
 const ExperienceRole = ({ experience }: { experience: ExperienceProps }) => (
   <div className="flex flex-col">
-    <span className="text-gray-800 text-[1.15rem] flex justify-start">
-      {experience.title}
-    </span>
-    <span className="text-gray-500  flex justify-start">
+    <span className="text-gray-800 flex justify-start">{experience.title}</span>
+    <span className="text-gray-500 flex justify-start">
       {formatDate(experience.startDate)} - {formatDate(experience.endDate)}
     </span>
     {experience.bulletPoints && (
@@ -102,10 +100,10 @@ export default function Experiences({
   return (
     <>
       <div className="text-gray-500 text-2xl pb-4">{title}</div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-2">
         {sortedCompanies.map((company) => (
           <div key={company} className="flex flex-col gap-2">
-            <span className="text-gray-500 text-[1.25rem] font-semibold flex justify-start">
+            <span className="text-gray-800 text-[1.15rem]  font-semibold flex justify-start">
               {company}
             </span>
             <div className="flex flex-col gap-4 pl-4 border-gray-300 ">

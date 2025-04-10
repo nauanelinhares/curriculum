@@ -35,12 +35,12 @@ const SideMenu = ({
           ))}
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-bold  text-gray-700 text-justify">
+          <h2 className="text-2xl font-bold  text-gray-700 text-justify">
             Education
           </h2>
           {education.map((edu, index) => (
             <div key={index}>
-              <h3 className="font-semibold text-gray-700 text-justify">
+              <h3 className="font-semibold text-xl text-gray-700 text-justify">
                 {edu.school}:
               </h3>
               <p className="text-gray-600 text-justify">
@@ -52,12 +52,12 @@ const SideMenu = ({
       </div>
 
       <div className="flex flex-col gap-2">
-        <h2 className="text-xl font-bold  text-gray-700 text-justify">
+        <h2 className="text-2xl font-bold  text-gray-700 text-justify">
           Skills
         </h2>
         {skillCategories.map((category, categoryIndex) => (
           <div key={categoryIndex}>
-            <h3 className="font-semibold text-gray-700  text-justify">
+            <h3 className="font-semibold text-xl text-gray-700  text-justify">
               {category.name}:{" "}
             </h3>
             <p className="text-gray-600 text-justify">

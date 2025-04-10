@@ -124,6 +124,7 @@ export const extraActivities: ExperienceProps[] = [
       "Data Analysis with Power BI for Admissions: Leveraged Power BI to analyze data from previous selection processes for 8th and 9th-grade students, identifying schools and locations with the highest number of applicants. This targeted approach enabled the team to focus efforts effectively, achieving a record-breaking 2,200+ subscriptions.",
       "Automated spreadsheets using Google Script to streamline team metrics and OKR updates, as well as science olympiad research",
       "Built a WhatsApp bot to assist parents and guardians with questions about the course application process and program information",
+      "Led team of Directors managing volunteer members for a community preparatory course serving 760 students.",
     ],
     iconCompany: "iconCompany",
   },
