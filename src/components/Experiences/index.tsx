@@ -19,9 +19,9 @@ const formatDate = (date: Date | undefined | null) => {
 const ExperienceBulletPoints = ({ points }: { points: string[] }) => (
   <div className="mt-2">
     {points.map((point, index) => (
-      <div key={index} className="flex flex-row gap-4 items-center">
-        <div className="flex-shrink-0 mt-1.5 w-2 h-2 bg-gray-500 rounded-full"></div>
-        <div className="text-[0.85rem] text-gray-500 text-justify">{point}</div>
+      <div key={index} className="flex flex-row gap-2 items-center">
+        <div className="flex-shrink-0 w-2 h-2 bg-gray-500 rounded-full"></div>
+        <div className="text-[0.85rem] text-gray-500 text-center">{point}</div>
       </div>
     ))}
   </div>
