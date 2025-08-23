@@ -4,7 +4,7 @@ Um projeto de currículo online interativo construído com React, TypeScript e V
 
 ## Visão Geral
 
-Este repositório contém o código-fonte para meu currículo online pessoal. Ele apresenta minhas habilidades, experiência profissional e projetos de forma interativa e moderna.
+Este repositório contém o código-fonte para meu currículo online pessoal. Ele apresenta minhas habilidades, experiência profissional e projetos de forma interativa e moderna!
 
 ## Tecnologias Utilizadas
 
