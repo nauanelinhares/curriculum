@@ -2,35 +2,23 @@ import './App.css'
 
 import Experiences from "./components/Experiences";
 import userIcon from "./assets/user-icon.png";
-import SideMenu from "./components/SideMenu";
+import { SocialMedias } from "./components/SocialMedias";
 
-import {
-  education,
-  languages,
-  user,
-  socialMedia,
-  experiences,
-  extraActivities,
-  skillCategories,
-} from "./Users/nauane-linhares";
+import { user, experiences, drawings, socialMedia } from "./Users/kubra-gonen";
+import Drawing from "./components/Drawing/Drawing";
 
 function App() {
   return (
     <div className="flex">
-      <SideMenu
-        education={education}
-        skillCategories={skillCategories}
-        languages={languages}
-        socialMedia={socialMedia}
-      />
       {/* Main content */}
-      <div className="w-3/4 p-6">
+      <div className="w-full p-6 justify-center items-center">
         <h1 className="bg-gray-700 bg-clip-text text-5xl font-extrabold text-transparent ...">
           {user.name}
         </h1>
         <h2 className="text-gray-500 text-2xl">{user.role}</h2>
 
-        <div className="flex flex-row gap-4 justify-center items-center m-4"></div>
+        <SocialMedias socialMedias={socialMedia} />
+
         <hr className="my-4 h-[1.75px]" />
 
         <div className="flex flex-row gap-4 mt-8 items-center">
@@ -50,7 +38,13 @@ function App() {
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
-        <Experiences experiences={extraActivities} title="Extra Activities" />
+        <h2 className="text-gray-500 text-2xl">Portfolio</h2>
+
+        <div className="grid grid-cols-2 gap-4 justify-items-center">
+          {drawings.map((drawing) => (
+            <Drawing image={drawing.image} title={drawing.title} />
+          ))}
+        </div>
       </div>
     </div>
   );

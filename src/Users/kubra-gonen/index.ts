@@ -1,3 +1,4 @@
+import { ArtProps } from "../../components/Drawing/types";
 import { ExperienceProps } from "../../components/Experiences/types";
 import { Language } from "../../components/SideMenu/types";
 
@@ -6,6 +7,23 @@ import { Skill } from "../../components/SideMenu/types";
 import { Education } from "../../components/SideMenu/types";
 import { SocialMediaProps } from "../../types/social-media";
 import { UserProps } from "../../types/user";
+import linkedinIcon from "../../assets/linkedin.png";
+import instagramIcon from "../../assets/instagram.png";
+import gmailIcon from "../../assets/gmail.png";
+
+import ladyDimitrescu from "../../assets/lady_demistrecu.png";
+import jinx from "../../assets/jinx.jpg";
+import barrels from "../../assets/barrels.png";
+import branch from "../../assets/branch.jpg";
+import forest from "../../assets/forest.png";
+import pear from "../../assets/pear.webp";
+import player from "../../assets/player.png";
+import randomPeople from "../../assets/random-people.png";
+import random from "../../assets/random.png";
+import trees from "../../assets/trees.webp";
+import turkishWithFez from "../../assets/turkish_with_fez.jpg";
+import turkish from "../../assets/turkish.webp";
+import woman from "../../assets/woman.png";
 
 export const education: Education[] = [
   {
@@ -67,17 +85,17 @@ export const socialMedia: SocialMediaProps[] = [
   {
     label: "Linkedin",
     url: "https://www.linkedin.com/in/k%C3%BCbra-g%C3%B6nen-477169220/",
-    icon: "iconLinkedin",
+    icon: linkedinIcon,
   },
   {
     label: "Instagram",
     url: "https://www.instagram.com/kbragnn/",
-    icon: "iconInstagram",
+    icon: instagramIcon,
   },
   {
     label: "Email",
     url: "mailto:kubragnn.0@gmail.com",
-    icon: "iconEmail",
+    icon: gmailIcon,
   },
 ];
 
@@ -93,7 +111,52 @@ export const user: UserProps = {
    in character design, mascots, NFTs, and 2D game design. Proficient in tools like Photoshop, Illustrator, and Procreate. 
    I've contributed to game and NFT projects while also teaching sculpture workshops. 
    I enjoy combining traditional and digital skills to bring creative concepts to life. 
-   Fluent in English, with basic Portuguese knowledge.
+   Intermediate in English, with basic Portuguese knowledge.
    I'm passionate about art, design, and continuous learning.
   `,
 };
+
+export const drawings: ArtProps[] = [
+  {
+    image: turkishWithFez,
+  },
+  {
+    image: turkish,
+  },
+  {
+    image: ladyDimitrescu,
+  },
+  {
+    image: jinx,
+  },
+  {
+    image: barrels,
+  },
+  {
+    image: branch,
+  },
+  {
+    image: forest,
+  },
+
+  {
+    image: player,
+  },
+  {
+    image: randomPeople,
+  },
+
+  {
+    image: random,
+  },
+  {
+    image: pear,
+  },
+  {
+    image: trees,
+  },
+
+  {
+    image: woman,
+  },
+];
