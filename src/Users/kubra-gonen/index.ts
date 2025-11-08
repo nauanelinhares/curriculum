@@ -52,8 +52,8 @@ export const experiences: ExperienceProps[] = [
   {
     company: "Masterpiece",
     title: "Sculpture Workshop Instructor",
-    startDate: new Date(2022, 0, 1),
-    endDate: new Date(2023, 0, 1),
+    startDate: new Date(2024, 4, 1),
+    endDate: new Date(2024, 7, 1),
     bulletPoints: [
       "I taught sculpture workshops to children and adults. I also helped them to create their own sculptures.",
     ],
@@ -74,8 +74,8 @@ export const experiences: ExperienceProps[] = [
   {
     company: "Stak games",
     title: "2D Concept Artist",
-    startDate: new Date(2022, 0, 1),
-    endDate: new Date(2023, 0, 1),
+    startDate: new Date(2023, 10, 1),
+    endDate: new Date(2024, 3, 1),
     bulletPoints: [
       "Contributed to character and environment design in game projects",
     ],
@@ -109,16 +109,17 @@ export const user: UserProps = {
   address: "123 Main St, Anytown, USA",
   city: "Anytown",
   description: `
-   I am a third-year Sculpture student at Hacettepe University with 5 years of freelance experience
-   in character design, mascots, NFTs, and 2D game design. Proficient in tools like Photoshop, Illustrator, and Procreate. 
-   I've contributed to game and NFT projects while also teaching sculpture workshops. 
-   I enjoy combining traditional and digital skills to bring creative concepts to life. 
-   Intermediate in English, with basic Portuguese knowledge.
-   I'm passionate about art, design, and continuous learning.
+  I am a final-year Sculpture student at Hacettepe University with over five years of freelance experience in character design, mascots, NFTs, and 2D game design. I am proficient in Photoshop, Illustrator, and Procreate. I have contributed to various game and NFT projects. I enjoy combining traditional and digital techniques to bring creative ideas to life. I have intermediate proficiency in English and basic knowledge of Portuguese. Art, design, and continuous learning are my greatest passions.
   `,
 };
 
 export const drawings: ArtProps[] = [
+  {
+    image: characterDesign,
+  },
+  {
+    image: characterDesign2,
+  },
   {
     image: turkishWithFez,
   },
@@ -160,11 +161,5 @@ export const drawings: ArtProps[] = [
 
   {
     image: woman,
-  },
-  {
-    image: characterDesign,
-  },
-  {
-    image: characterDesign2,
   },
 ];
