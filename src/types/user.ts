@@ -8,4 +8,5 @@ export type UserProps = {
     state?: string;
     country?: string;
     description?: string;
+    researchInterests?: string;
 }

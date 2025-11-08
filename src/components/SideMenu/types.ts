@@ -4,6 +4,8 @@ export interface Education {
   school: string;
   degree: string;
   period: string;
+  location?: string;
+  gpa?: string;
 }
 
 export interface Skill {

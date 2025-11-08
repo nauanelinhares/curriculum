@@ -45,6 +45,12 @@ const SideMenu = ({
               <p className="text-gray-600 text-justify">
                 {edu.degree} - {edu.period}
               </p>
+              {edu.location && (
+                <p className="text-gray-600 text-justify">{edu.location}</p>
+              )}
+              {edu.gpa && (
+                <p className="text-gray-600 text-justify">GPA: {edu.gpa}</p>
+              )}
             </div>
           ))}
         </div>

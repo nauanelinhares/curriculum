@@ -1,6 +1,7 @@
 import './App.css'
 
 import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
 import userIcon from "./assets/user-icon.png";
 import SideMenu from "./components/SideMenu";
 
@@ -12,6 +13,7 @@ import {
   experiences,
   extraActivities,
   skillCategories,
+  projects,
 } from "./Users/nauane-linhares";
 
 function App() {
@@ -35,22 +37,32 @@ function App() {
 
         <div className="flex flex-row gap-4 mt-8 items-center">
           <img src={userIcon} alt="user" className="w-8 h-8 filter grayscale" />
-          <span className="text-gray-500 text-2xl">About me</span>
+          <span className="text-gray-500 text-2xl">Profile</span>
         </div>
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
         <div className="flex flex-col gap-2 text-justify">
           <span className="text-gray-500 ">{user.description}</span>
+          {user.researchInterests && (
+            <div className="mt-4">
+              <span className="text-gray-700 font-semibold">Research Interests: </span>
+              <span className="text-gray-500">{user.researchInterests}</span>
+            </div>
+          )}
         </div>
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
-        <Experiences experiences={experiences} title="Experiences" />
+        <Experiences experiences={experiences} title="Work Experience" />
 
         <hr className="my-4 bg-gray-500 h-[1.75px]" />
 
-        <Experiences experiences={extraActivities} title="Extra Activities" />
+        <Projects projects={projects} title="Projects" />
+
+        <hr className="my-4 bg-gray-500 h-[1.75px]" />
+
+        <Experiences experiences={extraActivities} title="Leadership & Volunteering" />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const getMostRecentExperience = (experiences: ExperienceProps[]) => {
 };
 
 const formatDate = (date: Date | undefined | null) => {
-  if (!date) return "Present";
+  if (!date) return "Today";
   return date.toLocaleDateString("en-US", {
     month: "short",
     year: "numeric",
