@@ -24,6 +24,8 @@ import trees from "../../assets/trees.webp";
 import turkishWithFez from "../../assets/turkish_with_fez.jpg";
 import turkish from "../../assets/turkish.webp";
 import woman from "../../assets/woman.png";
+import characterDesign from "../../assets/character_design.png";
+import characterDesign2 from "../../assets/character_design_2.png";
 
 export const education: Education[] = [
   {
@@ -158,5 +160,11 @@ export const drawings: ArtProps[] = [
 
   {
     image: woman,
+  },
+  {
+    image: characterDesign,
+  },
+  {
+    image: characterDesign2,
   },
 ];
